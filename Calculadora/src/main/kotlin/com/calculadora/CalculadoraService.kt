@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class CalculadoraService {
-    fun somar (n1: Double?, n2: Double): Double {
+    fun somar (n1: Double, n2: Double): Double {
         return n1 + n2
     }
 
@@ -17,6 +17,9 @@ class CalculadoraService {
     }
 
     fun dividir (n1: Double, n2: Double): Double {
+            if (n2 == 0.0) {
+                return 0.0
+            }
         return n1 / n2
     }
 }
